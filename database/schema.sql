@@ -1,0 +1,25 @@
+DROP DATABASE IF EXISTS bd_escola;
+
+CREATE DATABASE bd_escola;
+
+USE bd_escola;
+
+CREATE TABLE tabela_professores (
+id SERIAL PRIMARY KEY,
+Nome VARCHAR(100) NOT NULL,
+Materia VARCHAR(100) NOT NULL,
+CPF VARCHAR(11) not null UNIQUE,
+Email varchar(100) not null UNIQUE);
+
+CREATE TABLE tabela_alunos (
+id SERIAL PRIMARY KEY NOT NULL,
+Nome VARCHAR(100) NOT NULL,
+Serie VARCHAR(50) NOT NULL,
+Turma INT NOT NULL,
+Matricula VARCHAR(11) NOT NULL UNIQUE);  
+
+
+
+
+
+
